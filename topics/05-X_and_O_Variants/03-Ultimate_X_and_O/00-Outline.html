@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mobile Game Development</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=192394" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=192394" target="_blank"><img height="18pt" src="../../../style/misc/img/slack_logo.png" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+										<li >
+											<a href="../../../topics/01-Lua_Programming/index.html">Lua Programming</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Introduction_to_Solar_2D/index.html">Introduction to Solar 2D</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Chemistry_Sort/index.html">Chemistry Sort</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/04-Some_Simple_Games/index.html">Some Simple Games</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/05-X_and_O_Variants/index.html">X and O Variants</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li >
+											<a href="../../../topics/05-X_and_O_Variants/index.html#01-Game_Idea">Game Idea</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/05-X_and_O_Variants/index.html#02-Basic_X_and_O">Basic X and O</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/05-X_and_O_Variants/index.html#03-Ultimate_X_and_O">Ultimate X and O</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Outline</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li class="active">
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>Ultimate X and O</h1>
+<p>We are now ready to start Ultimate X and O. First review the rules:</p>
+<ul>
+<li>Each small 3 × 3 X and O board is referred to as a sub-board, and the larger 3 × 3 board is referred to as the main board.</li>
+<li>Each move consists of picking, <strong>if allowed</strong>, a sub-board, and then picking a location within that board.</li>
+<li>Normally a player is not allowed to pick the sub-board, but must use the sub-board determined by the previous move. However a player is free to pick a sub-board if:<ul>
+<li>It is the first move of the game.</li>
+<li>The sub-board indicated by the previous move is already won/tied. </li>
+</ul>
+</li>
+<li>The sub-board are won/lost/tied using normal X and O rules, resulting in a X, O or blank in the main board.</li>
+<li>Game ends when either player wins the main board or there are no more legal moves remaining.</li>
+</ul>
+<h2>Implementation</h2>
+<p>The implementation that we have used to date is easily adopted to Ultimate X and O. Here I will only outline the steps that I carried out, you need to fill in the details:</p>
+<p><strong>Game Logic</strong></p>
+<ul>
+<li>Keep <code>board</code> to store the state of the main game board. Create table <code>subboards</code> which stores the states of the nine sub-boards. </li>
+<li>All of the functions in <code>mylib</code> to check for wins/loss/tie work as is &mdash; just pass either the main board, i.e. <code>board</code>, or one of the sub-boards i.e. <code>subboards[k]</code> for some value of <code>k</code>.</li>
+</ul>
+<p><strong>Graphics</strong></p>
+<figure>
+<img src="files/Picture_1.jpg" width="9%" />
+<img src="files/Picture_2.jpg" width="9%" />
+<img src="files/Picture_3.jpg" width="9%" />
+<img src="files/Picture_4.jpg" width="9%" />
+<img src="files/Picture_5.jpg" width="9%" />
+<img src="files/Picture_6.jpg" width="9%" />
+<img src="files/Picture_7.jpg" width="9%" />
+<img src="files/Picture_8.jpg" width="9%" />
+<img src="files/Picture_9.jpg" width="9%" />
+<img src="files/Picture_10.jpg" width="9%" />
+<figcaption>First 10 moves in a typical game.</figcaption>
+</figure>
+
+<ul>
+<li>The function <code>drawLine</code> can be used to draw the sub-grids.  I wrote a small function, <code>drawBoard</code>, which draws a board centered at a given location and at a given scale.  I call this function 10 times (9 sub-boards and once for the main board).</li>
+<li>The table <code>squares</code>, which stores the <code>symbol</code> for the main board should also store the symbols played in the corresponding sub-board. I used <code>subsquares</code> for this.</li>
+<li>The <code>resetBoard</code> function needs to be extended to</li>
+<li>Dispose of the resources in <code>subsquares</code> for each <code>square</code> in <code>squares</code>.</li>
+<li>Reset the <code>subboards</code> table to represent the empty board.</li>
+</ul>
+<p><strong>UI</strong></p>
+<ul>
+<li>A move consists of one or two taps.  </li>
+<li>If the player is not free to pick the sub-board, then the current sub-board is highlighted and the player just picks the location. Note &mdash; I coded this by dealing with events relative to the main board. This does make life much easier.</li>
+<li>If the player is free to pick the sub-board, then the first tap is to select a sub-board.</li>
+<li>The validating of the one/two taps is carried out in <code>checkMove</code>, which then calls <code>move</code> with two integers (for me <code>k</code> and <code>kk</code>) which indicate the sub-board number and the cell in that sub-board.</li>
+</ul>
+<p><strong>AI</strong></p>
+<ul>
+<li>Need to pass both <code>boards</code> and <code>subboards</code> to <code>ai.move</code> function.</li>
+<li>The minimax implementation should work as is &mdash; except for the loop iterating over the moves. The <code>1...9</code> loop in X and O needs to be replaced by looping over sub-boards and looping over cells in that board.</li>
+<li>The main issue here is the increased size of the game tree. You can improve the search by implementing a more advanced evaluation function.</li>
+</ul>
+<h2>Upload to Moodle</h2>
+<p>When completed, create a zip file of your project and upload to Moodle using the following link.</p>
+<div class="pager">
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=3627330" role="button">Submit using Moodle</a>
+</div>
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>

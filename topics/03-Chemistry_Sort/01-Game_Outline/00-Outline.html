@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mobile Game Development</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=192394" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=192394" target="_blank"><img height="18pt" src="../../../style/misc/img/slack_logo.png" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+										<li >
+											<a href="../../../topics/01-Lua_Programming/index.html">Lua Programming</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Introduction_to_Solar_2D/index.html">Introduction to Solar 2D</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/03-Chemistry_Sort/index.html">Chemistry Sort</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/04-Some_Simple_Games/index.html">Some Simple Games</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/05-X_and_O_Variants/index.html">X and O Variants</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li class="active">
+											<a href="../../../topics/03-Chemistry_Sort/index.html#01-Game_Outline">Game Outline</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Outline</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li class="active">
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>Chemistry Sort</h1>
+<h2>Outline</h2>
+<p>This is a simple puzzle game, where the user needs to reorder the coloured drops in a number of test tubes so that each tube is either empty or filled with drops of one colour. You are not allowed to place a drop of one colour on top of a drop of another colour.  Features include:</p>
+<ul>
+<li>Variable number of test tubes and variable number of coloured drops.</li>
+<li>Level are timed.</li>
+<li>Configurable level setup.  </li>
+</ul>
+<figure>
+  <img src="files/game.png" alt="" width="60%" >
+  <figcaption>Example of game layout</figcaption>
+</figure>
+
+<h2>Basic implementation</h2>
+<p>To see how well you understood the <a href="https://docs.coronalabs.com/guide/programming/02/index.html">Star Explorer</a> I'm only giving you the structure of the game. You will need to implement the body of the listed functions yourselves.</p>
+<p>To start:</p>
+<ul>
+<li>Create a new project called <strong>Chemistry Sort</strong> to run on iPhone in landscape mode.</li>
+<li>Download and extract the contents of the assets <a href="files/assets.zip">archive</a>. This archive contains images (only one!) and some utility code.</li>
+</ul>
+<h3>Game Data</h3>
+<p>Copy the <code>rng.lua`` and</code>colorsRGB.lua` into the root folder.</p>
+<p>Place the following code into your <code>main.lua</code> file. </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">FULL</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1">-- number of drops to full a tube</span>
+
+<span class="kd">local</span> <span class="n">tubes</span> <span class="o">=</span> <span class="p">{</span> <span class="p">}</span>
+<span class="kd">local</span> <span class="n">selectedDrop</span>
+
+<span class="kd">local</span> <span class="n">rng</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;rng&quot;</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="n">colorsRGB</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;colorsRGB&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">colors</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;snow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;steelblue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rosybrown&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;orchid&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wheat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;thistle&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;teal&quot;</span>
+<span class="p">}</span>
+
+<span class="kd">local</span> <span class="n">moves</span>
+<span class="kd">local</span> <span class="n">timeRemaining</span>
+<span class="kd">local</span> <span class="n">timeRemainingTimer</span>
+<span class="kd">local</span> <span class="n">levelOver</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre></div>
+</td></tr></table>
+<p>Comments:</p>
+<ul>
+<li>Test tubes are stored in table <code>tubes</code> and <ul>
+<li>Each test tube will be an instance of <code>assets/tube.png</code> with dimensions 70 x 197.</li>
+<li>Test tubes are centered horizontally with a gap of 80. This will allow up to 7 test tubes.</li>
+<li>Each tube will have a table property <code>drops</code> that stores the drops in that tube.</li>
+</ul>
+</li>
+<li>A move consists of two phases. Pick up a drop from one tube and add it to another tube. <code>selectedDrop</code> stores the drop during the move.</li>
+</ul>
+<h3>Test functions</h3>
+<p>First implement the following functions test functions</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">isEmpty</span><span class="p">(</span><span class="n">tube</span><span class="p">)</span> 
+    <span class="c1">-- Empty tube = has no drops</span>
+    <span class="kr">return</span>      
+<span class="kr">end</span> 
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">isFull</span><span class="p">(</span><span class="n">tube</span><span class="p">)</span> 
+    <span class="c1">-- Full tube = has FULL drops</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">isSolved</span><span class="p">(</span><span class="n">tube</span><span class="p">)</span>
+    <span class="c1">--- complete = is full AND all drops have the same color </span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">isAllSolved</span><span class="p">()</span>
+    <span class="c1">-- Are all tubes complete (or empty)</span>
+<span class="kr">end</span> 
+</code></pre></div>
+</td></tr></table>
+<h3>Add and remove drop functions</h3>
+<p>Next implement two functions that will be used later to construct a move.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">addDrop</span><span class="p">(</span><span class="n">drop</span><span class="p">,</span> <span class="n">tube</span><span class="p">,</span> <span class="n">animate</span><span class="p">)</span>
+    <span class="c1">-- place drop into tube. </span>
+
+    <span class="c1">-- change drop position so that it is &#39;inside tube&#39; and &#39;on top&#39; of other drops </span>
+    <span class="c1">-- append drop to tube drop collection</span>
+<span class="kr">end</span>
+
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">removeDrop</span><span class="p">(</span><span class="n">tube</span><span class="p">,</span> <span class="n">animate</span><span class="p">)</span> 
+    <span class="c1">-- remove and return the top drop from given tube or nil.</span>
+
+    <span class="c1">-- if tube is empty then return nill</span>
+
+    <span class="c1">-- take the top most drop and move it to top of test tube.</span>
+    <span class="c1">-- remove drop from tube drop collection.</span>
+    <span class="c1">-- return drop</span>
+
+<span class="kr">end</span> 
+
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">moveDrop</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> 
+    <span class="c1">-- Pick up/drop a drop from/to selected tube.</span>
+
+    <span class="c1">-- we will come back to this later</span>
+<span class="kr">end</span>
+</code></pre></div>
+</td></tr></table>
+<h3>Setup level</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">startLevel</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>
+    <span class="c1">-- create level with given parameters</span>
+
+    <span class="c1">-- number of colors, number of spare tubes, level difficulty and duration</span>
+    <span class="kd">local</span> <span class="n">nColors</span><span class="p">,</span> <span class="n">nSwap</span><span class="p">,</span> <span class="n">nDifficulty</span><span class="p">,</span> <span class="n">duration</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">nTubes</span> <span class="o">=</span> <span class="n">nColors</span> <span class="o">+</span> <span class="n">nSwap</span>
+
+
+    <span class="c1">-- instaniate all of the tubes</span>
+        <span class="c1">-- put in correct position</span>
+        <span class="c1">-- table property drops to store drops</span>
+        <span class="c1">-- add tap event lisenter to call moveDrop</span>
+        <span class="c1">-- first nColors start being full of drops of one color</span>
+
+    <span class="n">rng</span><span class="p">.</span><span class="n">randomseed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+    <span class="c1">-- using nDifficulty randomise the starting position</span>
+       <span class="c1">-- possible algorithm: </span>
+          <span class="c1">-- pick random source and destination tubes and move drop if allowed.</span>
+          <span class="c1">-- repeat based on nDifficulty</span>
+
+
+    <span class="c1">-- initialise game variables (moves, etc)</span>
+
+    <span class="c1">-- start countdown clock </span>
+       <span class="c1">-- Use timer.performWithDelay with 1 second delay</span>
+       <span class="c1">-- Need function updateClock to update timeRemaining and text label</span>
+
+<span class="kr">end</span>
+
+<span class="n">startLevel</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="mi">90</span><span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
+<h3>Moving a drop</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">moveDrop</span><span class="p">(</span> <span class="n">event</span> <span class="p">)</span> 
+    <span class="c1">-- Pick up/drop a drop from/to selected tube.</span>
+
+    <span class="kd">local</span> <span class="n">tube</span> <span class="o">=</span> <span class="n">event</span><span class="p">.</span><span class="n">target</span>
+
+    <span class="c1">-- if selectedDrop is nil then </span>
+       <span class="c1">-- remove drop from selected tubeand save it to selectedDrop</span>
+    <span class="c1">-- </span>
+       <span class="c1">-- place selectedDrop to selected tube if allowed</span>
+       <span class="c1">-- upate moves count</span>
+
+    <span class="c1">-- if game is solved</span>
+       <span class="c1">-- stop counddown clock</span>
+<span class="kr">end</span>
+</code></pre></div>
+</td></tr></table>
+<h2>Improvements / Assignment</h2>
+<p>Using the shell provided complete the game and implement the following improvements. (
+max grade is an estimate.)</p>
+<h3>Basic improvements (max 40%)</h3>
+<ul>
+<li>Convert to using scenes (Menu, high scores, and game).</li>
+<li>Support for reset level.</li>
+<li>Support unlimited undo.</li>
+<li>Support for canceling move &mdash; pick up a drop and place it back down in same tube </li>
+</ul>
+<h3>Intermediate improvements (max 60%)</h3>
+<ul>
+<li>Support for hints.</li>
+<li>Give bonas if number of moves is minimum.</li>
+<li>Only have solvable levels.</li>
+</ul>
+<h3>Advanced improvements (max 100%)</h3>
+<ul>
+<li>Support showing solution to problem</li>
+</ul>
+<div class="pager">
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=3603256" role="button">Submit using Moodle</a>
+</div>
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
